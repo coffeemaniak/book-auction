@@ -1,0 +1,13 @@
+.carousel-wparrer {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.carousel-image {
+    width: 100%;
+    max-height: min-content;
+}
+
+.carousel-image img {
+    margin: 0 auto;
+}
