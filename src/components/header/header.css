@@ -1,19 +1,25 @@
 .main_header {
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     padding: 10px;
-    background-color: bisque;
+    background-color: floralwhite;
     justify-content: space-between;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
+}
+
+.header_logo {
+    width: 100px;
+    height: auto;
 }
 
 .header_link {
     text-transform: uppercase;
     text-decoration: none;
     color: black;
-    font-size: medium;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     margin: 10px;
+    padding-top: 30px;
 }
 
 .header_link:hover {

@@ -1,0 +1,16 @@
+.main_section {
+    background-image: url("./header.jpg");
+    margin: 0 auto;
+    height: 200px;
+    margin-bottom: 40px;
+}
+
+.main_section-title {
+    margin: 0 auto;
+    font-size: 28px;
+    text-align: center;
+    vertical-align: middle;
+    font-style: italic;
+    padding-top: 95px;
+    font-weight: 600;
+}

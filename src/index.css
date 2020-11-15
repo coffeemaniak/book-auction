@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  background: url("./books-836880_960_720.jpg") repeat;
+  background: url("./bigbg.jpg") top center, repeat-y;
+  background-size: 100%;
+  font-family: 'Libre Baskerville', serif;
 }
 
 code {
