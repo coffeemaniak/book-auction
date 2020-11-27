@@ -1,19 +1,25 @@
-import React,  {Component} from "react";
-import firebase from "firebase/app";
+import React from "react";
+import { ref } from "../../services/firebase";
 
-export default  class BookList extends Component {
-    
-    // componentDidMount() {
-    //     const db = firebase.database();
-    //     console.log(db);
-    // }
-    
-    // eslint-disable-next-line react/require-render-return
-    render() {
-        return (
-            <div>
-                hi
-            </div>
+    const BookList = () => {
+        ref.once("value", getData);
+        function getData(snapshot) {
+            snapshot.forEach(bookSnapshot => {
+                    const id = bookSnapshot.val().id;
+                    console.log(id);
+                    // return(
+                    //     <div>
+                    //         <h1>{id}</h1>
+                            
+                    //     </div>
+                    // )
+                })
+            }
+
+        return(
+            <div>hi</div>
         )
-    }
-}
+    };
+
+
+export default BookList;

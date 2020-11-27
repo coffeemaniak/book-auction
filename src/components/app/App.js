@@ -5,9 +5,9 @@ import Header from "../header";
 import MainSection from "../main-section";
 import {Catalog, About} from "../pages";
 import BookList from "../book-list";
-import firebase from "firebase/app";
 
-function App() {
+
+function App  () {
   return (
     <div>
       <Header/>
