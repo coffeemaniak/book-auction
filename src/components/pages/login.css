@@ -1,0 +1,32 @@
+.login_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: bisque;
+    width: 248px;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: sienna solid 1px;
+    padding-top: 10px;
+}
+
+.login_input,
+.password_input {
+    margin: 10px 20px;
+    width: 200px;
+    height: 30px;
+}
+
+.login_enter {
+    background-color:chocolate;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 69px;
+    align-self: center;
+    width: 110px;
+}

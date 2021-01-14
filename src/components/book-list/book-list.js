@@ -6,6 +6,7 @@ import { ref } from "../../services/firebase";
         function getData(snapshot) {
             snapshot.forEach(bookSnapshot => {
                     const id = bookSnapshot.val().id;
+                    // eslint-disable-next-line no-undef
                     console.log(id);
                     // return(
                     //     <div>
