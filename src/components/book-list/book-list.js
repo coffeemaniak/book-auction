@@ -1,26 +1,21 @@
-import React from "react";
+import React,  {Component} from "react";
 import { ref } from "../../services/firebase";
 
-    const BookList = () => {
-        ref.once("value", getData);
-        function getData(snapshot) {
-            snapshot.forEach(bookSnapshot => {
-                    const id = bookSnapshot.val().id;
-                    // eslint-disable-next-line no-undef
-                    console.log(id);
-                    // return(
-                    //     <div>
-                    //         <h1>{id}</h1>
-                            
-                    //     </div>
-                    // )
-                })
-            }
+    export default class BookList extends Component {
+        state = {}
 
-        return(
-            <div>hi</div>
-        )
+        componentDidMount() {
+            // const {getData, snapshot};
+            ref.on("value", (snapshot) => {
+                    snapshot.forEach(bookSnapshot => this.setState({id: bookSnapshot.val().id}))
+                    
+            })
+            // .catch(err => new Error(err))
+    }
+        render() {
+            const { id } = this.state;
+            return (
+                    <h1>{id} hello</h1>
+            )
+        }
     };
-
-
-export default BookList;
