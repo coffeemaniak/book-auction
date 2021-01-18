@@ -1,13 +1,21 @@
-.login_block {
+.login_block,
+.join_block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: bisque;
-    width: 248px;
     margin: 0 auto;
     border-radius: 15px;
     border: sienna solid 1px;
     padding-top: 10px;
+}
+
+.login_block {
+    width: 248px;
+}
+
+.join_block {
+    width: 500px;
 }
 
 .login_input,
@@ -17,7 +25,14 @@
     height: 30px;
 }
 
-.login_enter {
+.join_input {
+    margin: 10px 20px;
+    width: 450px;
+    height: 30px;
+}
+
+.login_enter,
+.join_enter {
     background-color:chocolate;
     font-size: 30px;
     text-align: center;
@@ -26,7 +41,15 @@
     margin: 0 auto;
     margin-bottom: 30px;
     margin-top: 20px;
-    margin-left: 69px;
     align-self: center;
+}
+
+.login_enter {
     width: 110px;
+    margin-left: 69px;
+}
+
+.join_enter {
+    width: 322px;
+    margin-left: 89px;
 }
