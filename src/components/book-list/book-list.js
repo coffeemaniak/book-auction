@@ -2,20 +2,31 @@ import React,  {Component} from "react";
 import { ref } from "../../services/firebase";
 
     export default class BookList extends Component {
-        state = {}
+        state = {
+            itemList: []
+        }
 
         componentDidMount() {
-            // const {getData, snapshot};
             ref.on("value", (snapshot) => {
-                    snapshot.forEach(bookSnapshot => this.setState({id: bookSnapshot.val().id}))
-                    
+                let itemList = [];
+                snapshot.forEach(bookSnapshot => {
+                    itemList.push(bookSnapshot.val());
+                });
+                this.setState({itemList: itemList});
             })
-            // .catch(err => new Error(err))
     }
+
         render() {
-            const { id } = this.state;
             return (
-                    <h1>{id} hello</h1>
+                <div className="book_list">
+                    <ul>
+                        {this.state.itemList.map(data => {
+                            return (
+                                <li key={data.id}>{data.title} {data.author_name}</li>
+                            );
+                        })}
+                    </ul>
+                </div>
             )
         }
     };
