@@ -19,13 +19,25 @@ import { ref } from "../../services/firebase";
         render() {
             return (
                 <div className="book_list">
-                    <ul>
+                    <div>
                         {this.state.itemList.map(data => {
+                            const {id, title, author_name, author_surname, publisher, age, pages, description, start_data, start_price, cover} = data;
                             return (
-                                <li key={data.id}>{data.title} {data.author_name}</li>
+                                <div key={id}>
+                                    <div><img src={cover} alt="cover"></img></div>
+                                    <div>
+                                    <h2>{title}</h2> 
+                                    <p>{author_name}, {author_surname} </p>
+                                    <span>Издательство {publisher}, {age} год</span>
+                                    <span>Количество страниц: {pages}</span>
+                                    <p>{description}</p>
+                                    <span>{start_data}</span>
+                                    <span>{start_price}</span>
+                                    </div>
+                                </div>
                             );
                         })}
-                    </ul>
+                    </div>
                 </div>
             )
         }
